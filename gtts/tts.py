@@ -152,7 +152,7 @@ class gTTS:
         try:
             # Python 2
             return len(unicode(text))
-        except NameError:
+        except (NameError, UnicodeDecodeError):
             # Python 3
             return len(text)
 
